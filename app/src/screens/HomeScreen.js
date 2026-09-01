@@ -14,9 +14,9 @@ import { summary, recentEntries } from '../data/mockData';
 
 const features = [
   { id: 'customers', label: 'Customers', icon: 'people-outline', route: 'Customers' },
-  { id: 'reports', label: 'Reports', icon: 'bar-chart-outline' },
-  { id: 'reminders', label: 'Reminders', icon: 'notifications-outline' },
-  { id: 'history', label: 'History', icon: 'time-outline' },
+  { id: 'reports', label: 'Reports', icon: 'bar-chart-outline', route: 'Reports' },
+  { id: 'reminders', label: 'Reminders', icon: 'notifications-outline', route: 'Reminders' },
+  { id: 'history', label: 'History', icon: 'time-outline', route: 'History' },
 ];
 
 function typeMeta(type) {
@@ -77,7 +77,7 @@ export default function HomeScreen({ navigation }) {
 
         <View style={styles.sectionHeaderRow}>
           <Text style={styles.sectionHeader}>Recent Entries</Text>
-          <TouchableOpacity onPress={() => navigation.navigate('Customers')}>
+          <TouchableOpacity onPress={() => navigation.navigate('History')}>
             <Text style={styles.sectionLink}>See all</Text>
           </TouchableOpacity>
         </View>

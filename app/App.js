@@ -8,6 +8,9 @@ import RegisterScreen from './src/screens/RegisterScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import CustomersScreen from './src/screens/CustomersScreen';
 import CustomerDetailScreen from './src/screens/CustomerDetailScreen';
+import ReportsScreen from './src/screens/ReportsScreen';
+import RemindersScreen from './src/screens/RemindersScreen';
+import HistoryScreen from './src/screens/HistoryScreen';
 import { colors } from './src/theme';
 
 const Stack = createNativeStackNavigator();
@@ -28,6 +31,9 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Customers" component={CustomersScreen} />
         <Stack.Screen name="CustomerDetail" component={CustomerDetailScreen} />
+        <Stack.Screen name="Reports" component={ReportsScreen} />
+        <Stack.Screen name="Reminders" component={RemindersScreen} />
+        <Stack.Screen name="History" component={HistoryScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

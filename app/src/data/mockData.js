@@ -72,3 +72,45 @@ export const summary = {
   creditGiven: 1400,
   pendingDues: customers.reduce((sum, c) => sum + c.pendingDue, 0),
 };
+
+// Full transaction feed across all customers — powers the History screen.
+// Built from the same `customers` data above so numbers stay consistent.
+export const fullHistory = customers
+  .flatMap((c) =>
+    c.entries.map((e) => ({
+      ...e,
+      customerId: c.id,
+      customerName: c.name,
+    }))
+  )
+  .concat([
+    { id: 'h1', type: 'debit', amount: 180, item: null, date: 'Today, 1:52 PM', customerId: null, customerName: 'Cash Sale' },
+    { id: 'h2', type: 'debit', amount: 95, item: null, date: 'Today, 10:20 AM', customerId: null, customerName: 'Cash Sale' },
+    { id: 'h3', type: 'debit', amount: 220, item: null, date: 'Yesterday, 5:10 PM', customerId: null, customerName: 'Cash Sale' },
+  ]);
+
+// Last 7 days of sales / credit / payments, in rupees — powers the Reports chart.
+export const weeklyTrend = [
+  { day: 'Mon', sales: 1800, credit: 900, payments: 400 },
+  { day: 'Tue', sales: 2200, credit: 600, payments: 700 },
+  { day: 'Wed', sales: 1500, credit: 1200, payments: 300 },
+  { day: 'Thu', sales: 2600, credit: 500, payments: 900 },
+  { day: 'Fri', sales: 3000, credit: 1400, payments: 600 },
+  { day: 'Sat', sales: 3400, credit: 800, payments: 1100 },
+  { day: 'Sun', sales: 3250, credit: 1400, payments: 1300 },
+];
+
+export const monthSummary = {
+  totalSales: weeklyTrend.reduce((s, d) => s + d.sales, 0) * 4,
+  totalCredit: weeklyTrend.reduce((s, d) => s + d.credit, 0) * 4,
+  totalPayments: weeklyTrend.reduce((s, d) => s + d.payments, 0) * 4,
+};
+
+// Customers with pending dues, sorted by how overdue they are — powers Reminders.
+export const reminderQueue = customers
+  .filter((c) => c.pendingDue > 0)
+  .map((c, i) => ({
+    ...c,
+    daysOverdue: [2, 9, 15, 30][i % 4],
+  }))
+  .sort((a, b) => b.daysOverdue - a.daysOverdue);
