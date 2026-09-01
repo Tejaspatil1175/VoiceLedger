@@ -3,8 +3,6 @@
 | Field | Value |
 |---|---|
 | Status | Draft |
-| Owner | Tejas Bachhav |
-| Team | Neural Ninjas |
 | Related | [System Architecture](../architecture/system-architecture.md), [Data Flow](../architecture/data-flow.md), [Component Diagram](../architecture/component-diagram.md) |
 
 ## 1. Purpose
