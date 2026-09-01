@@ -33,15 +33,18 @@ VoiceLedger removes all three barriers at once.
 
 ## App Preview
 
-<p align="center">
-  <img src="preview/login.png" width="150" alt="Login screen" />
-  <img src="preview/homepage.png" width="150" alt="Home screen" />
-  <img src="preview/customerpage.png" width="150" alt="Customer page" />
-  <br />
-  <img src="preview/history.png" width="150" alt="History screen" />
-  <img src="preview/reminderpage.png" width="150" alt="Reminder page" />
-  <img src="preview/reportspage.png" width="150" alt="Reports page" />
-</p>
+<table>
+  <tr>
+    <td align="center"><img src="preview/login.png" width="180" alt="Login screen" /></td>
+    <td align="center"><img src="preview/homepage.png" width="180" alt="Home screen" /></td>
+    <td align="center"><img src="preview/customerpage.png" width="180" alt="Customer page" /></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="preview/history.png" width="180" alt="History screen" /></td>
+    <td align="center"><img src="preview/reminderpage.png" width="180" alt="Reminder page" /></td>
+    <td align="center"><img src="preview/reportspage.png" width="180" alt="Reports page" /></td>
+  </tr>
+</table>
 
 ## How It Works (User Flow)
 
