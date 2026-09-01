@@ -1,31 +1,34 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import LoginScreen from './src/screens/LoginScreen';
+import RegisterScreen from './src/screens/RegisterScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import CustomersScreen from './src/screens/CustomersScreen';
+import CustomerDetailScreen from './src/screens/CustomerDetailScreen';
+import { colors } from './src/theme';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello, World!</Text>
-      <Text style={styles.subtext}>Running on Expo</Text>
-      <StatusBar style="light" />
-    </View>
+    <NavigationContainer>
+      <StatusBar style="dark" backgroundColor={colors.background} />
+      <Stack.Navigator
+        initialRouteName="Login"
+        screenOptions={{
+          headerShown: false,
+          contentStyle: { backgroundColor: colors.background },
+        }}
+      >
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Register" component={RegisterScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Customers" component={CustomersScreen} />
+        <Stack.Screen name="CustomerDetail" component={CustomerDetailScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#1e1e2e',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    color: '#ffffff',
-    fontSize: 28,
-    fontWeight: 'bold',
-    marginBottom: 8,
-  },
-  subtext: {
-    color: '#a6adc8',
-    fontSize: 16,
-  },
-});
