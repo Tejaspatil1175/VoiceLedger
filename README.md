@@ -57,3 +57,13 @@ All AI inference runs on the Snapdragon NPU — this is the part that genuinely 
 | [System Architecture](architecture/system-architecture.md) | Full flow from mic input to ledger update |
 | [Data Flow](architecture/data-flow.md) | Sequence of a single voice entry through the pipeline |
 | [Component Diagram](architecture/component-diagram.md) | App and on-device AI layer breakdown |
+
+### Engineering Docs
+
+| Doc | Description |
+|---|---|
+| [Technical Design Document](docs/technical-design-document.md) | Purpose, goals, architecture, tech stack, risks, milestones |
+| [Data Model](docs/data-model.md) | Customer and LedgerEntry schemas, structured LLM output contract |
+| [API Contracts](docs/api-contracts.md) | Internal interfaces between STT, parsing, and data layer |
+| [Non-Functional Requirements](docs/non-functional-requirements.md) | Latency, accuracy, offline, and privacy targets |
+| [Testing Strategy](docs/testing-strategy.md) | Test plan across STT, parsing, ledger, and end-to-end |
