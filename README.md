@@ -31,6 +31,18 @@ India has 60M+ kirana stores, roadside vendors, and micro-businesses. Most still
 
 VoiceLedger removes all three barriers at once.
 
+## App Preview
+
+<p align="center">
+  <img src="preview/homepage.png" width="150" alt="Home screen" />
+  <img src="preview/customerpage.png" width="150" alt="Customer page" />
+  <img src="preview/history.png" width="150" alt="History screen" />
+  <br />
+  <img src="preview/login.png" width="150" alt="Login screen" />
+  <img src="preview/reminderpage.png" width="150" alt="Reminder page" />
+  <img src="preview/reportspage.png" width="150" alt="Reports page" />
+</p>
+
 ## How It Works (User Flow)
 
 1. **Speak** — "Ramesh ko 500 rupaye udhaar diya" (gave Ramesh ₹500 on credit)
